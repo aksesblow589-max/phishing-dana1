@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/*.php", "use": "vercel-php@0.7.4" }
+  ],
+  "routes": [
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/otp", "dest": "/api/otp.php" },
+    { "src": "/dashboard", "dest": "/api/dashboard.php" },
+    { "src": "/proses", "dest": "/api/proses.php" },
+    { "src": "/bot", "dest": "/api/bot.php" },
+    { "src": "/(.*)", "dest": "/api/index.php" }
+  ]
+}
